@@ -1,0 +1,13 @@
+
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+    <h1 id="home">Welcome to LYNN Online IT Support</h1>
+    <h5 id="home">LYNN provides online support to any of your problems regarding computers or smartphones. Login or Sign Up to get help.</h5>
+        <a href="{% url 'login' %}"><button class="btn3 btn-success">Login</button></a>
+        <a href="{% url 'Register:index' %}"><button class="btn3 btn-success">Sign Up</button></a>
+    </div>            
+{% endblock %}

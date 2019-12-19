@@ -1,0 +1,65 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <title>LYNN</title>
+</head>
+      
+
+<body>
+  <div id="transparent">
+  <nav class="navbar  navbar-expand-lg navbar-white bg-white">
+    <a href="{% url 'Home:index' %}"><img src="{% static 'images/logo.jpg' %}" width="100px" height="65px" alt="LYNN"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class=" offset-md-8 navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'Home:index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Chat:index' %}">Chat</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="{% url 'Register:index' %}">Sign Up</a>
+              </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+<main role="main">            
+  <div class="container">
+      <!— Example row of columns —>
+      <div class="row">
+          {% block content %}
+          
+          {% endblock %}
+    
+    </div> <!— /container —>
+    
+    </main>
+    
+    <!-- <footer class="container">
+    <p>&copy; Company 2017-2019</p>
+    </footer> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  </div>
+</body>

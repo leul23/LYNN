@@ -1,0 +1,30 @@
+
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row">
+<div class="col-md-4 text-left abc">
+    <!-- Default form login -->
+    <form action="#!">
+        <p class="h2 offset-md-3 text-success">Login</p>
+            <!-- Email --> <label for="mail" class="in">Username</label> <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Enter Username"> 
+            <!-- Password --> <label for="pass" class="in">Password</label> <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Enter Password">
+        <div class="d-flex justify-content-left">
+            <div>
+                <!-- Remember me -->
+                <div class="custom-control custom-checkbox text-left"> <input type="checkbox" class="custom-control-input"> <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label> </div>
+            </div>
+        </div> <!-- Sign in button --> 
+        <button class="btn  btn-block btn-success" type="submit">LOGIN</button> 
+        <a href="">Forgot Password?</a>
+    </form>
+</div>
+<div class=" offset-md-1 col-md-5 signup">
+    <p id="signtxt">Login to your account to benefit from our different service plans. feel free to Signup if you do not have account yet </p>
+    <a href="{% url 'Register:index' %}"><button class="btn btn-success">Sign Up</button></a>
+  </div>
+<div class="offset-md-2"></div>
+
+</div>                  
+{% endblock %}

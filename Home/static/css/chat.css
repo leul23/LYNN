@@ -1,0 +1,59 @@
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #eeefe9;
+}
+.navbar {
+    min-height: 80px;
+    background:transparent;
+  }
+  
+  .navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+    
+  }
+  .image {
+    background: url(../images/purpalt.png) repeat;
+    padding: 442px 15px 60px;
+    color: #fff;
+}
+.intro-block2 {
+  padding: 100px 15px 60px;
+  color: #000;
+}
+
+  .navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      /* (80px - line-height of 27px) / 2 = 26.5px */
+      padding-top: 26.5px;
+      padding-bottom: 26.5px;
+      line-height: 27px;
+}}
+
+
+
+
+.row  {
+  margin-top: -12px;
+}
+
+
+
+.signup {
+  margin-top: 150px;
+  margin-left: 30px;
+}
+.navbar .navbar-brand{
+  color:#28A745;
+}
+.navbar ul li a{
+  color:#28A745;
+}
