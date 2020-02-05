@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('Home.urls')),
     path('signup/', include('Register.urls')),
     path('chat/', include('Chat.urls')),
+    path('techchat/', include('TechChat.urls')),
     path('', include("django.contrib.auth.urls")),
     path('requests/', include('Request.urls')),
     url(r'^view_users/$', views.view_users),
