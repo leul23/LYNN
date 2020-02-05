@@ -18,11 +18,11 @@
 </head>
 <body>
     <div id="transparent">
-        <nav class="navbar  navbar-expand-lg navbar-white bg-white">
-            <a href="{% url 'Home:index' %}"><img src="{% static 'images/logo.jpg' %}" width="100px" height="65px" alt="LYNN"></a>
-        
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+		<nav class="navbar  navbar-expand-lg navbar-white bg-white">
+			<a href="{% url 'Home:index' %}"><img src="{% static 'images/logo.jpg' %}" width="100px" height="65px" alt="LYNN"></a>
+		
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class=" offset-md-8 navbar-collapse" id="navbarSupportedContent">
@@ -30,9 +30,12 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="{% url 'Home:index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'Chat:index' %}">Chat</a>
-                </li>
+				<li class="nav-item">
+				  <a class="nav-link" href="{% url 'Chat:index' %}">Bot</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="{% url 'TechChat:index' %}">Chat</a>
+				</li>
 				<li class="nav-item">
 				  <a class="nav-link" href="{% url 'Request:index' %}">Request</a>
 				</li>

@@ -10,3 +10,4 @@ class ChatSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Chat
         fields = ('sender', 'receiver','msg','time')
+        
