@@ -32,10 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'crispy_forms',
     'Home.apps.HomeConfig',
     'Chat.apps.ChatConfig',
     'Register.apps.RegisterConfig',
+    'Request.apps.RequestConfig',
+    'TechChat.apps.TechchatConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

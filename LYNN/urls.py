@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from TechChat import views
+from TechChat.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,5 +25,10 @@ urlpatterns = [
     path('signup/', include('Register.urls')),
     path('chat/', include('Chat.urls')),
     path('', include("django.contrib.auth.urls")),
-
+    path('requests/', include('Request.urls')),
+    url(r'^view_users/$', views.view_users),
+    url(r'^save_msg/$', views.save_msg),
+    url(r'^get_chat/$', views.get_chat),
+    url(r'^view_msg/$', views.view_msg),
+    url(r'^index', index, name='index'),
 ]
