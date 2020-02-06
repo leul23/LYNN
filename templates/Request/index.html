@@ -2,25 +2,33 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<div class="row" style="margin-top: -10px;">
+  <div class="col-md-7 text-left abcd">
+      <!-- Default form login -->
+      {% if submitted %}
+            <p class="success">
+               Your message was submitted successfully. Thank you.
+           </p>
+      {% else %}
 
-              <div class="row">
-                <div class="col-md-7 text-left abc">
-                    <!-- Default form login -->
-                    <form action="#!">
-                        <p class="h2 offset-md-3 text-success">Support Request</p>
-
-                         <label for="mail" class="in">Username</label> 
-                         <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Enter Username"> 
-                         
-                        <label for="mail" class="in">Request</label> 
-                         <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Enter your issue"> 
-
-                        <label for="mail" class="in">Location</label> 
-                         <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Enter Your Location"> 
-                       
-                        <button class="btn2  btn-block btn-success" type="submit">Request</button> 
-                       
-                    </form>
+      <form method="post">
+          <p class="h2 offset-md-3 text-success">Request Support</p>
+      {% csrf_token %}
+      {% for field in form %}
+        <p>
+          {{ field.label_tag }}<br>
+          {{ field }}
+          {% if field.help_text %}
+            <small style="color: grey">{{ field.help_text }}</small>
+          {% endif %}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
+        </p>
+      {% endfor %}
+      <button class="btn  btn-block btn-success" type="submit">Request</button> 
+    </form>
+    {% endif %}
                 </div>
                 
                 <div class=" offset-md-1 col-md-4 signup">
