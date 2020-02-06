@@ -9,8 +9,8 @@ def requests(request):
     if request.method == 'POST':
         form = RequestForm(request.POST)
         if form.is_valid():
-            cd = form.cleaned_data
-            # assert False
+            form.save()
+            form.cleaned_data
             return HttpResponseRedirect('/requests?submitted=True')
     else:
         form = RequestForm()
